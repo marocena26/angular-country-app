@@ -11,6 +11,6 @@ import { ContactPagesComponent } from './pages/contact-pages/contact-pages.compo
 @NgModule({
   declarations: [AboutPagesComponent, HomePageComponent, SidebarComponent, ContactPagesComponent],
   imports: [CommonModule, RouterModule],
-  exports: [AboutPagesComponent, HomePageComponent, SidebarComponent ],
+  exports: [AboutPagesComponent, HomePageComponent, SidebarComponent, ContactPagesComponent ],
 })
 export class SharedModule {}
