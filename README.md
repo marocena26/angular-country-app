@@ -14,7 +14,7 @@ In this repository you can find the files generated in the **Angular: de cero a 
 
 Application to search for places in the world. The user will use a search bar to be able to see on screen the countries that belong to a specific region, capital or country. 
 
-> **NOTE:** Direct link to the project by clicking on the following **[link](https://country-app-marocena26.netlify.app/countries/by-capital)**.
+> **NOTE:** Direct link to the project by clicking on the following **[link](https://country-app-marocena26.netlify.app)**.
 
 ## 🛠️ Tools
 
