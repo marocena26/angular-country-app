@@ -5,20 +5,19 @@ import { Country } from '../../interfaces/country';
 @Component({
   selector: 'app-by-capital-page',
   templateUrl: './by-capital-page.component.html',
-  styleUrls: ['./by-capital-page.component.css']
+  styleUrls: ['./by-capital-page.component.css'],
 })
 export class ByCapitalPageComponent {
-
-
   public countries: Country[] = [];
+  public isLoading: boolean = false;
+  constructor(private countryService: CountriesService) {}
 
-  constructor(private countryService: CountriesService){}
+  searchByCapital(term: string) {
+    this.isLoading = true;
 
-  searchByCapital (term : string) {
-    this.countryService.searchCapital(term).subscribe( countries => {
+    this.countryService.searchCapital(term).subscribe((countries) => {
       this.countries = countries;
-    })
-
+      this.isLoading = false;
+    });
   }
-
 }
