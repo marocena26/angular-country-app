@@ -11,13 +11,19 @@ export class ByCountryPageComponent {
 
   public countries: Country[] = [];
   public isLoading: boolean = false;
+  public initialValue: string = '';
 
-  constructor(private countryService: CountriesService){}
+  constructor(private countriesService: CountriesService){}
+
+  ngOnInit(): void {
+    this.countries = this.countriesService.cacheStore.byCountries.countries;
+    this.initialValue = this.countriesService.cacheStore.byCountries.term;
+  }
 
   searchByCountry (term : string) {
     this.isLoading = true;
 
-    this.countryService.searchCountry(term).subscribe( countries => {
+    this.countriesService.searchCountry(term).subscribe( countries => {
       this.countries = countries;
       this.isLoading = false;
 
