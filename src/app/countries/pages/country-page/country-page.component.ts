@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CountriesService } from '../../services/countries.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
-import { Country } from '../../interfaces/country';
+import { Clp, Country, Currencies, Languages } from '../../interfaces/country';
 
 @Component({
   selector: 'app-country-page',
@@ -28,6 +28,16 @@ export class CountryPageComponent implements OnInit {
         if ( !country ) return this.router.navigateByUrl('');
         return this.country = country;
       });
+  }
+
+  getCurrencies(currencies: Currencies): Clp[] {
+    // Convierte el objeto currencies en un array
+    return Object.values(currencies);
+  }
+
+  getLanguages(languages: Languages): string[] {
+    // Convierte el objeto languages en un array
+    return Object.values(languages);
   }
 
 }

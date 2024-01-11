@@ -22,7 +22,7 @@ export class CountriesService {
   }
 
   private getCountriesRequest(url: string): Observable<Country[]> {
-    return this.http.get<Country[]>(url).pipe(catchError(() => of([])));
+    return this.http.get<Country[]>(url).pipe(catchError(() => of([])),);
   }
 
   private saveToLocalStorage() {

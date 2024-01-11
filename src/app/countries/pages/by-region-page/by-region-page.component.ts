@@ -10,7 +10,7 @@ import { Region } from '../../interfaces/region.type';
 })
 export class ByRegionPageComponent {
   public countries: Country[] = [];
-  public regions: Region[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+  public regions: Region[] = ['Africa', 'America', 'Asia', 'Europe', 'Oceania'];
   public selectedRegion?: Region;
 
   constructor( private countriesService: CountriesService ) {}

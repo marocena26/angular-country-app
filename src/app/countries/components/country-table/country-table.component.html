@@ -2,7 +2,7 @@
   *ngIf="countries.length === 0; else table"
   class="alert alert-warning text-center"
 >
-  No hay países que mostrar
+  Opps! There are no info to show
 </div>
 
 <ng-template #table>
@@ -10,11 +10,11 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>Icon</th>
-        <th>Bandera</th>
-        <th>Nombre</th>
+        <th>Code</th>
+        <th>Flag</th>
+        <th>Name</th>
         <th>Capital</th>
-        <th>Población</th>
+        <th>Population</th>
         <th></th>
       </tr>
     </thead>
